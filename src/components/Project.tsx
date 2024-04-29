@@ -23,7 +23,7 @@ export default function Project(props: {
           <div className={styles["image-content"]}>
             <Image
               className={styles.image}
-              src={"/" + props.project.image}
+              src={"/sora/" + props.project.image}
               alt="Project image"
               width={250}
               height={0}

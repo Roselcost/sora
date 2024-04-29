@@ -57,7 +57,7 @@ video {
 
 @font-face {
   font-family: Lato;
-  src: url("/Lato-Light.ttf");
+  src: url("/sora/Lato-Light.ttf");
 }
 
 .animate-opacity {
