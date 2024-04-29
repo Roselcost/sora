@@ -1,6 +1,6 @@
 # Project Sora
 
-Made with `React`, `NextJS`, `Typescript`, `HTML` and `CSS`.
+Made with `React`, `NextJS`, `TypeScript`, `HTML` and `CSS`.
 
 My personal website
 

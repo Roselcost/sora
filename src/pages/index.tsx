@@ -13,7 +13,7 @@ export default function Home() {
       image: "codenamecafe.jpg",
       url: "https://roselcost.github.io/CodenameCafe/",
       gitHub: "https://github.com/Roselcost/CodenameCafe",
-      techs: ["Angular", "Typescript", "Redux"],
+      techs: ["Angular", "TypeScript", "Redux"],
     },
     {
       title: "Shin Kiwami",
@@ -21,7 +21,7 @@ export default function Home() {
       image: "shinkiwami.jpg",
       url: "https://roselcost.github.io/shinkiwami/",
       gitHub: "https://github.com/Roselcost/shinkiwami",
-      techs: ["React", "Typescript", "Redux"],
+      techs: ["React", "TypeScript", "Redux"],
     },
     {
       title: "Mario Kart Tracker",
@@ -29,7 +29,7 @@ export default function Home() {
       image: "mariokarttracker.jpg",
       url: "https://roselcost.github.io/mariokarttracker/",
       gitHub: "https://github.com/Roselcost/mariokarttracker",
-      techs: ["React", "Typescript", "Redux"],
+      techs: ["React", "TypeScript", "Redux"],
     },
     {
       title: "Topsters 4",
@@ -37,7 +37,7 @@ export default function Home() {
       image: "mariokarttracker.jpg",
       url: "https://roselcost.github.io/topsters4",
       gitHub: "https://github.com/Roselcost/topsters4",
-      techs: ["React", "Typescript", "Redux", "Next.JS"],
+      techs: ["React", "TypeScript", "Redux", "NextJS"],
     },
   ];
   const toggleTheme = () => {

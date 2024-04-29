@@ -39,7 +39,7 @@ export default function Project(props: {
                 <div key={tech} className={styles.tech}>
                   <div
                     style={
-                      props.dark && tech === "Next.JS"
+                      props.dark && tech === "NextJS"
                         ? { filter: "invert(1)" }
                         : {}
                     }
