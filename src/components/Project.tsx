@@ -17,7 +17,9 @@ export default function Project(props: {
     <>
       <div className={styles.project}>
         <div className={styles["project-title"]}>
-          <h3>{props.project.icon} {props.project.title}</h3>
+          <h3>
+            {props.project.icon} {props.project.title}
+          </h3>
         </div>
         <div className={styles["image-container"]}>
           <div className={styles["image-content"]}>
@@ -48,7 +50,7 @@ export default function Project(props: {
                       alt={tech}
                       width={15}
                       height={15}
-                      src={`${tech}.svg`}
+                      src={`/sora/${tech}.svg`}
                       priority
                     />
                   </div>
@@ -67,7 +69,7 @@ export default function Project(props: {
                   alt="Github"
                   width={20}
                   height={20}
-                  src="GitHub.svg"
+                  src="/sora/GitHub.svg"
                   priority
                 />
               </div>

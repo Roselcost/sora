@@ -68,7 +68,7 @@ export default function Home() {
         <title>Roselcost</title>
         <meta name="description" content="Roselcost website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/sora/favicon.png" />
       </Head>
       <main className={`animate-opacity ${styles.main}`}>
         <ParticlesJS dark={darkTheme} on={isParticlesOn}></ParticlesJS>

@@ -47,6 +47,12 @@
   backdrop-filter: blur(1px);
 }
 
+@media (max-width: 1300px) {
+  .section {
+    max-height: unset;
+  }
+}
+
 html[dark] body .section {
   background-color: hsla(204, 21%, 9%, 0.388);
   border: 1px solid rgb(66, 66, 66);
@@ -147,5 +153,10 @@ html[dark] body .minititle {
   gap: 20px;
   flex-wrap: wrap;
   height: 650px;
-  max-height: 100%;
+}
+
+@media (max-width: 1300px) {
+  .projects {
+    height: unset
+  }
 }
