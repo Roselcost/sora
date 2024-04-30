@@ -115,11 +115,15 @@ export default function Home() {
                 <div>
                   <h2>Some things I love</h2>
                   <div className={styles.hobbies}>
-                    <h2 className={styles.minititle}>🎮 Videogames</h2>
-                    <h2 className={styles.minititle}>🏯 Japanese culture</h2>
-                    <h2 className={styles.minititle}>🍣 Cook</h2>
-                    <h2 className={styles.minititle}>🎸 Play music</h2>
-                    <h2 className={styles.minititle}>⛰️ Explore</h2>
+                    <div className={styles['hobbies-row']}>
+                      <h2 className={styles.minititle}>🎮 Videogames</h2>
+                      <h2 className={styles.minititle}>🏯 Japanese culture</h2>
+                    </div>
+                    <div className={styles['hobbies-row']}>
+                      <h2 className={styles.minititle}>🍣 Cook</h2>
+                      <h2 className={styles.minititle}>🎸 Play music</h2>
+                      <h2 className={styles.minititle}>⛰️ Explore</h2>
+                    </div>
                   </div>
                 </div>
                 <div className={styles.activities}>

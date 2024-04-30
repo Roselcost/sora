@@ -14,11 +14,12 @@ body {
   font-family: "Lato";
   color: rgb(48, 48, 48);
   user-select: none;
+  background-color: rgb(196, 207, 209);
 }
 
 html[dark] body {
   color: rgb(196, 196, 196);
-  background-color: black;
+  background-color: rgb(13, 17, 20);
   background-image: radial-gradient(at left, rgb(12, 12, 12), rgb(17, 25, 30));
 }
 

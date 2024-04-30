@@ -32,7 +32,9 @@ export default function Project(props: {
               priority
             />
           </div>
-          <div className={styles.icon}>{props.project.icon}</div>
+          <div className={styles['icon-container']}>
+            <span className={styles.icon}>{props.project.icon}</span>
+          </div>
         </div>
         <div className={styles.footer}>
           <div className={styles.techs}>
