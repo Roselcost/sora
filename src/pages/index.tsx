@@ -33,10 +33,10 @@ export default function Home() {
     },
     {
       title: "Topsters 4",
-      icon: "🖼️",
-      image: "mariokarttracker.jpg",
-      url: "https://roselcost.github.io/topsters4",
-      gitHub: "https://github.com/Roselcost/topsters4",
+      icon: "🥇",
+      image: "topsters.jpg",
+      url: "https://topsters4.vercel.app",
+      gitHub: "https://github.com/Roselcost/topsters",
       techs: ["React", "TypeScript", "Redux", "NextJS"],
     },
   ];
@@ -110,16 +110,16 @@ export default function Home() {
                     Also known as Roselcost and{" "}
                     <span style={{ fontSize: "12px" }}>ダニーさん</span>
                   </h2>
-                  <h2 className={styles.minititle}>From Barcelona</h2>
+                  <h2 className={styles.minititle}>Frontend Developer from Barcelona</h2>
                 </div>
                 <div>
                   <h2>Some things I love</h2>
                   <div className={styles.hobbies}>
-                    <div className={styles['hobbies-row']}>
+                    <div className={styles["hobbies-row"]}>
                       <h2 className={styles.minititle}>🎮 Videogames</h2>
                       <h2 className={styles.minititle}>🏯 Japanese culture</h2>
                     </div>
-                    <div className={styles['hobbies-row']}>
+                    <div className={styles["hobbies-row"]}>
                       <h2 className={styles.minititle}>🍣 Cook</h2>
                       <h2 className={styles.minititle}>🎸 Play music</h2>
                       <h2 className={styles.minititle}>⛰️ Explore</h2>
