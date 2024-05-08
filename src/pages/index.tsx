@@ -110,7 +110,9 @@ export default function Home() {
                     Also known as Roselcost and{" "}
                     <span style={{ fontSize: "12px" }}>ダニーさん</span>
                   </h2>
-                  <h2 className={styles.minititle}>Frontend Developer from Barcelona</h2>
+                  <h2 className={styles.minititle}>
+                    Frontend Developer from Barcelona
+                  </h2>
                 </div>
                 <div>
                   <h2>Some things I love</h2>
@@ -120,9 +122,9 @@ export default function Home() {
                       <h2 className={styles.minititle}>🏯 Japanese culture</h2>
                     </div>
                     <div className={styles["hobbies-row"]}>
-                      <h2 className={styles.minititle}>🍣 Cook</h2>
-                      <h2 className={styles.minititle}>🎸 Play music</h2>
-                      <h2 className={styles.minititle}>⛰️ Explore</h2>
+                      <h2 className={styles.minititle}>🍣 Cooking</h2>
+                      <h2 className={styles.minititle}>🎸 Music</h2>
+                      <h2 className={styles.minititle}>⛰️ Exploring</h2>
                     </div>
                   </div>
                 </div>
