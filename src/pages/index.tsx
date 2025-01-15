@@ -115,8 +115,7 @@ export default function Home() {
                     </a>
                   </h1>
                   <h2 className={styles.minititle}>
-                    Also known as Roselcost and{" "}
-                    <span style={{ fontSize: "12px" }}>ダニーさん</span>
+                    Also known as Ross
                   </h2>
                   <h2 className={styles.minititle}>
                     Frontend Developer from Barcelona
