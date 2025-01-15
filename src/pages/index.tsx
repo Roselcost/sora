@@ -39,6 +39,14 @@ export default function Home() {
       gitHub: "https://github.com/Roselcost/topsters",
       techs: ["React", "TypeScript", "Redux", "NextJS"],
     },
+    {
+      title: "Kingdom Hearts IV",
+      icon: "🩵",
+      image: "kingdomheartsiv.jpg",
+      url: "https://roselcost.github.io/kingdomheartsiv/",
+      gitHub: "https://github.com/Roselcost/kingdomheartsiv",
+      techs: ["React", "TypeScript"],
+    },
   ];
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
