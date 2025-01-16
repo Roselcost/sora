@@ -8,14 +8,6 @@ import Button from "../components/Button";
 export default function Home() {
   const projects = [
     {
-      title: "Codename Cafe",
-      icon: "☕️",
-      image: "codenamecafe.jpg",
-      url: "https://roselcost.github.io/CodenameCafe/",
-      gitHub: "https://github.com/Roselcost/CodenameCafe",
-      techs: ["Angular", "TypeScript", "Redux"],
-    },
-    {
       title: "Shin Kiwami",
       icon: "🐉",
       image: "shinkiwami.jpg",
@@ -46,6 +38,14 @@ export default function Home() {
       url: "https://roselcost.github.io/kingdomheartsiv/",
       gitHub: "https://github.com/Roselcost/kingdomheartsiv",
       techs: ["React", "TypeScript"],
+    },
+    {
+      title: "Codename Cafe",
+      icon: "☕️",
+      image: "codenamecafe.jpg",
+      url: "https://roselcost.github.io/CodenameCafe/",
+      gitHub: "https://github.com/Roselcost/CodenameCafe",
+      techs: ["Angular", "TypeScript", "Redux"],
     },
   ];
   const toggleTheme = () => {
@@ -114,9 +114,7 @@ export default function Home() {
                       Dani Larrosa
                     </a>
                   </h1>
-                  <h2 className={styles.minititle}>
-                    Also known as Ross
-                  </h2>
+                  <h2 className={styles.minititle}>Also known as Ross</h2>
                   <h2 className={styles.minititle}>
                     Frontend Developer from Barcelona
                   </h2>
