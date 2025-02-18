@@ -40,6 +40,14 @@ export default function Home() {
       techs: ["React", "TypeScript"],
     },
     {
+      title: "Go The Distance",
+      icon: "🏛️",
+      image: "gothedistance.jpg",
+      url: "https://roselcost.github.io/gothedistance/",
+      gitHub: "https://github.com/Roselcost/gothedistance",
+      techs: ["React", "TypeScript"],
+    },
+    {
       title: "Codename Cafe",
       icon: "☕️",
       image: "codenamecafe.jpg",
