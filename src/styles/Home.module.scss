@@ -1,0 +1,115 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.particles-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 50px 0;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .main {
+    height: unset;
+  }
+
+  .projects {
+    height: unset;
+  }
+}
+
+.presentation {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+.chip {
+  font-size: 16px;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: 0.5s ease;
+
+  &--small {
+    font-size: 14px;
+  }
+}
+
+html[dark] .chip {
+  color: rgb(147, 147, 147);
+
+  &--small {
+    font-size: 14px;
+  }
+}
+
+.toggle-theme {
+  font-size: 18px;
+  padding-left: 0px;
+  color: var(--link-color);
+  cursor: pointer;
+  width: fit-content;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+
+.toggle-theme:hover{
+  background-color: var(--hover-color);
+}
+
+.work {
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid var(--border-color-2);
+}
+
+.chips {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  max-width: 760px;
+}

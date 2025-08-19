@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Shin Kiwami",
+    "icon": "🐉",
+    "image": "shinkiwami.jpg",
+    "url": "https://roselcost.github.io/shinkiwami/",
+    "gitHub": "https://github.com/Roselcost/shinkiwami",
+    "techs": ["React", "TypeScript", "Redux"],
+    "description": "Create character introduction screens like the ones in the Like a Dragon (formerly Yakuza) videogame series! Have you ever imagined being part of the series? Now you can do it in style, like many unforgettable characters such as Kiryu, Nishiki, Kuze, Saeko, Majima, Akiyama, Kiyomi, Date and so many more! You can even play the animation the exact same way like in the videogame, with the sound effect and the fade to white and black and all. Isn't that cool?\nThis is a remake of the Kiwami Introduction Generator, an application I made back in 2020. The goal back then was to have some practice on Vue and do something fun meanwhile.\nThe main reason why I remade this app was because I wanted to have a more polished version, since many people are using it and, honestly, the first version was kinda embarassing in some ways and you deserve better. Also, I was looking for a side project to do with React and this was perfect for the task. This time I aimed to replicate the UI of the latest Like a Dragon games, such as Infinite Wealth. Hope you like it!"
+  },
+  {
+    "id": 2,
+    "title": "Mario Kart Tracker",
+    "icon": "🏁",
+    "image": "mariokarttracker.jpg",
+    "url": "https://roselcost.github.io/mariokarttracker/",
+    "gitHub": "https://github.com/Roselcost/mariokarttracker",
+    "techs": ["React", "TypeScript", "Redux"],
+    "description": "This is a project that came up with my friends while we were planning to do all the 96 circuits in Mario Kart 8 Deluxe, including all the ones from the Booster Course Pass. Since the game doesn't allow to do a 96 circuit cup (and doesn't allow more than 4 players on a single Switch), I thought it would be a good idea to create a whole app to track the scores of everyone, even if we have to take a break and things like that.\n Like with other projects, I wanted to challenge myself by creating something quite different to what I usually do in terms of UI. Meanwhile, I was able to be more fluent with React.\n While it works just as fine, there might be a few errors and things that I didn't take into consideration, such as the fact that you can create as many profiles as you like, allow more than 12 players in a single game. I fixed (almost) everything that I could think of, but there might be some things that are not fixed yet. But now, for my friends and me, it works just fine."
+  },
+  {
+    "id": 3,
+    "title": "Topsters 4",
+    "icon": "🥇",
+    "image": "topsters.jpg",
+    "url": "https://topsters4.vercel.app",
+    "gitHub": "https://github.com/Roselcost/topsters",
+    "techs": ["React", "TypeScript", "Redux", "NextJS"],
+    "description": "Based on Topsters 3. There are some few extra features that I wanted to have, and that's why I implemented my own version!\n It was quite a challenge to work on this app. This time I decided to do it with NextJS, as I needed a full-stack environment to make API calls to different services with access tokens and it was perfect for the task.\n I'm quite happy with the final result and, while it didn't get as much popularity as Topsters 3, it ended being up used by quite some people and it's my first project to be forked by several users on GitHub.\nThe first time it was forked, the dev contacted me to inform me about it and ask a few things. It was very exciting to take a look at his new version with his own changes and features based on my previous work. I'm really proud of it!"
+  },
+  {
+    "id": 4,
+    "title": "Kingdom Hearts IV",
+    "icon": "🩵",
+    "image": "kingdomheartsiv.jpg",
+    "url": "https://roselcost.github.io/kingdomheartsiv/",
+    "gitHub": "https://github.com/Roselcost/kingdomheartsiv",
+    "techs": ["React", "TypeScript"],
+    "description": "This is a project that I wanted to do for a long time. The truth is, I procastinated for a few months for various reasons until I finally decided to be fully commited to this for a couple of weeks. In a way, as of January 2025 I've been lucky because KH4 hasn't been re-announced last year neither at Summer Games Fest, Tokyo Game Show or The Game Awards. If that was the case, I'm sure there would be an official website by now and this project would have made a little less sense. That said, I really wish Square Enix releases a new Kingdom Hearts IV trailer sooner than later. It's been almost 3 years and we fans deserve it. I'm sure it will end up being an amazing game and all this waiting will be worth in the end.\nThis site is built using with HTML, CSS and Typescript. As a framework, I used the old and realiable React. The goal with this project wasn't really to improve my React and JS skills, but rather practice on UX design and trying new things. In a way, this is my first project done while mainly focusing on this. As a result, even if I think there are some aspects I can improve over time, I had so much fun while doing it.\nI expect to update this site as soon as there are any news such as trailers, screenshots, worlds, characters or anything worth sharing.\nMay your heart be your guiding key 🩵"
+  },
+  {
+    "id": 5,
+    "title": "Go The Distance",
+    "icon": "🏛️",
+    "image": "gothedistance.jpg",
+    "url": "https://roselcost.github.io/gothedistance/",
+    "gitHub": "https://github.com/Roselcost/gothedistance",
+    "techs": ["React", "TypeScript"],
+    "description": "This is an little app made just for fun. It assumes straight routes with no stops, obstacles or traffic.\n This is a very simple project I was working on. The main idea was to put a map on the background and calculate the ideal routes based on the chosen transportation methods and so on, but there were limitations with the map APIs. Either they are paid or don't offer the needed features.\n So, in the end I managed to calculate the distance between 2 points with the Haversine formula and calculate times based on the distance and speed.\n Finally, I decided to put a moving bg of a picture of the Tokyo tower so it looks better."
+  },
+  {
+    "id": 6,
+    "title": "Codename Cafe",
+    "icon": "☕️",
+    "image": "codenamecafe.jpg",
+    "url": "https://roselcost.github.io/CodenameCafe/",
+    "gitHub": "https://github.com/Roselcost/CodenameCafe",
+    "techs": ["Angular", "TypeScript", "Redux"],
+    "description": "This app is a proof of concept on what an interactive menu would look like on a mobile app.\n This project came up while I was looking at my friend's restaurant menu with a pretty basic mobile app that does the job. But I wanted to improve it. I knew I could do it better. That's why I decided to make my own app with everything that a menu app should have. I wanted to have pictures of every item, an allergen filter, the ability to delete items that I definitely don't want to order so I can focus more on the ones that picked my interest, an allergen and diet filter and so on. \nAlthough I worked on previous projects (a Notion-like app that I ended up dropping, a previous version of my website and the Kiwami Generator, remade into Shin Kiwami, showcased as a project here), this is my first project made after gaining some true experience as a frontend developer and, more specifically, an Angular developer.\n Because of that, it implements concepts that I learned in my work experience such as typing with TypeScript, state management with NgRx, observables with RxJS, theme support, different languages in a i18n-like style and more.\n I think I did a good job back then, but looking back I think I can do it even better now. Maybe some time."
+  }
+]

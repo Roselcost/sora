@@ -1,0 +1,63 @@
+.section__title {
+  background-color: var(--main-color);
+  border: 1px solid rgb(123, 123, 123);
+  color: var(--inverted-color);
+  box-shadow: 3px 3px 5px black;
+  min-width: 150px;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 4px 20px;
+  transform: skew(-20deg);
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  z-index: 10;
+  transition: 0.5s ease;
+}
+
+.section__title h2 {
+  font-size: 20px;
+  transform: skew(20deg);
+}
+
+.section {
+  position: relative;
+  margin: 30px 16px 0 16px;
+  max-width: 90vw;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  background-color: var(--bg-color-3);
+  transition: 0.5s ease;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(
+    to bottom left,
+    rgb(229 229 229),
+    rgb(191 229 255)
+  );
+  border-radius: inherit;
+  -webkit-mask: conic-gradient(black 0 0) content-box, conic-gradient(black 0 0);
+  mask: conic-gradient(black 0 0) content-box exclude, conic-gradient(black 0 0);
+}
+
+html[dark] .section::before {
+  background: linear-gradient(
+    to bottom left,
+    rgb(150 212 255 / 23%),
+    rgb(47 47 47)
+  );
+}
+
+.section__content {
+  padding: 40px 20px 20px 20px;
+  max-height: 80vh;
+  overflow: auto;
+  backdrop-filter: blur(1px);
+}

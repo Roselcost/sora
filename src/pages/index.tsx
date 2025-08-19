@@ -1,61 +1,16 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.scss";
 import Project from "@/components/Project";
 import ParticlesJS from "@/components/ParticlesJS";
+import Card from "@/components/Card";
 import { useEffect, useState } from "react";
 import Button from "../components/Button";
+import Modal from "@/components/Modal";
+import { AnimatePresence } from "framer-motion";
+import projects from "../resources/projects.json";
+import Background from "@/components/Background";
 
 export default function Home() {
-  const projects = [
-    {
-      title: "Shin Kiwami",
-      icon: "🐉",
-      image: "shinkiwami.jpg",
-      url: "https://roselcost.github.io/shinkiwami/",
-      gitHub: "https://github.com/Roselcost/shinkiwami",
-      techs: ["React", "TypeScript", "Redux"],
-    },
-    {
-      title: "Mario Kart Tracker",
-      icon: "🏁",
-      image: "mariokarttracker.jpg",
-      url: "https://roselcost.github.io/mariokarttracker/",
-      gitHub: "https://github.com/Roselcost/mariokarttracker",
-      techs: ["React", "TypeScript", "Redux"],
-    },
-    {
-      title: "Topsters 4",
-      icon: "🥇",
-      image: "topsters.jpg",
-      url: "https://topsters4.vercel.app",
-      gitHub: "https://github.com/Roselcost/topsters",
-      techs: ["React", "TypeScript", "Redux", "NextJS"],
-    },
-    {
-      title: "Kingdom Hearts IV",
-      icon: "🩵",
-      image: "kingdomheartsiv.jpg",
-      url: "https://roselcost.github.io/kingdomheartsiv/",
-      gitHub: "https://github.com/Roselcost/kingdomheartsiv",
-      techs: ["React", "TypeScript"],
-    },
-    {
-      title: "Go The Distance",
-      icon: "🏛️",
-      image: "gothedistance.jpg",
-      url: "https://roselcost.github.io/gothedistance/",
-      gitHub: "https://github.com/Roselcost/gothedistance",
-      techs: ["React", "TypeScript"],
-    },
-    {
-      title: "Codename Cafe",
-      icon: "☕️",
-      image: "codenamecafe.jpg",
-      url: "https://roselcost.github.io/CodenameCafe/",
-      gitHub: "https://github.com/Roselcost/CodenameCafe",
-      techs: ["Angular", "TypeScript", "Redux"],
-    },
-  ];
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
     darkTheme
@@ -64,117 +19,153 @@ export default function Home() {
   };
 
   const prefersDarkTheme = () => {
-    const a =
+    return (
       window &&
       window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return a;
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
   };
 
   useEffect(() => {
     if (!prefersDarkTheme()) toggleTheme();
-    else document.getElementsByTagName("html")[0].setAttribute("dark", "true");
   }, []);
 
   const [isParticlesOn, setIsParticlesOn] = useState(true);
   const [darkTheme, setDarkTheme] = useState(true);
+  const [project, setProject] = useState(0);
+
+  const techs = [
+    "HTML",
+    "CSS",
+    "Tailwind CSS",
+    "Typescript",
+    "Angular",
+    "React",
+    "NextJS",
+    "NX",
+    "Jest",
+    "Redux",
+    "Copilot",
+    "Git",
+    "Azure",
+    "Vercel",
+    "Notion",
+  ];
+
+  const hobbies = [
+    "🎮 Videogames",
+    "🏯 Japanese culture",
+    "🎸 Music",
+    "⛰️ Exploring",
+    "🍣 Cooking",
+  ];
+
   return (
     <>
       <Head>
-        <title>Roselcost</title>
-        <meta name="description" content="Roselcost website" />
+        <title>Sora</title>
+        <meta name="description" content="Sora website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/sora/favicon.png" />
       </Head>
+      <AnimatePresence>
+        {!!project && (
+          <Modal
+            onclose={() => {
+              document.body.style.overflow = "";
+              setProject(0);
+            }}
+            dark={darkTheme}
+            project={projects[project - 1]}
+          />
+        )}
+      </AnimatePresence>
+      <div className={styles["particles-button"]}>
+        <Button onClick={() => setIsParticlesOn(!isParticlesOn)}>
+          <span style={isParticlesOn ? {} : {filter: 'contrast(0)'}}>{darkTheme ? "✨" : "☃️"}</span>
+        </Button>
+        <Button onClick={toggleTheme}>{darkTheme ? "🌙" : "☀️"}</Button>
+      </div>
       <main className={`animate-opacity ${styles.main}`}>
-        <ParticlesJS dark={darkTheme} on={isParticlesOn}></ParticlesJS>
-
-        <div className={styles["particles-button"]}>
-          <Button onClick={() => setIsParticlesOn(!isParticlesOn)}>
-            {isParticlesOn ? "✨" : "🌟"}
-          </Button>
-          <Button onClick={() => toggleTheme()}>
-            {darkTheme ? "🌙" : "☀️"}
-          </Button>
-        </div>
+        <Background></Background>
+        {isParticlesOn && (
+          <ParticlesJS dark={darkTheme} on={isParticlesOn}></ParticlesJS>
+        )}
         <div className={styles.container}>
-          <div className={styles.sectionContainer}>
-            <div className={styles.sectionTitle}>
-              <h2>Hello!</h2>
-            </div>
-            <div className={`${styles.section} ${styles.intro}`}>
-              <div className={styles.titles}>
-                <span
-                  onClick={() => {
-                    toggleTheme();
-                  }}
-                  className={styles.linkTitle}
-                >
-                  {darkTheme ? "🌙 Good night!" : "☀️ Good morning!"}
+          <Card title={"Hello!"}>
+            <div className={styles.presentation}>
+              <span onClick={toggleTheme} className={styles["toggle-theme"]}>
+                {darkTheme ? "🌙 Good night!" : "☀️ Good morning!"}
+              </span>
+              <div>
+                <h1>
+                  This is{" "}
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/daniel-larrosa-5449769a/"
+                  >
+                    Dani Larrosa
+                  </a>
+                </h1>
+                <h2 className={styles.subtitle}>Also known as Ross</h2>
+                <h2 className={styles.subtitle}>
+                  Frontend Developer from Barcelona
+                </h2>
+              </div>
+              <div>
+                <h2>Main techs I use</h2>
+                <div className={styles.chips}>
+                  {techs.map((tech) => (
+                    <span
+                      key={tech}
+                      className={`${styles["chip"]} ${styles["chip--small"]}`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h2>Some things I love</h2>
+                <div className={styles.chips}>
+                  {hobbies.map((hobby) => (
+                    <span key={hobby} className={styles.chip}>
+                      {hobby}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className={styles.work}>
+                <span className={styles.subtitle}>
+                  <a target="_blank" href="https://github.com/roselcost">
+                    💻 My code
+                  </a>
                 </span>
-                <div>
-                  <h1>
-                    This is{" "}
-                    <a
-                      target="_blank"
-                      href="https://www.linkedin.com/in/daniel-larrosa-5449769a/"
-                    >
-                      Dani Larrosa
-                    </a>
-                  </h1>
-                  <h2 className={styles.minititle}>Also known as Ross</h2>
-                  <h2 className={styles.minititle}>
-                    Frontend Developer from Barcelona
-                  </h2>
-                </div>
-                <div>
-                  <h2>Some things I love</h2>
-                  <div className={styles.hobbies}>
-                    <div className={styles["hobbies-row"]}>
-                      <h2 className={styles.minititle}>🎮 Videogames</h2>
-                      <h2 className={styles.minititle}>🏯 Japanese culture</h2>
-                    </div>
-                    <div className={styles["hobbies-row"]}>
-                      <h2 className={styles.minititle}>🍣 Cooking</h2>
-                      <h2 className={styles.minititle}>🎸 Music</h2>
-                      <h2 className={styles.minititle}>⛰️ Exploring</h2>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.activities}>
-                  <h2 className={styles.subtitle}>
-                    <a target="_blank" href="https://github.com/roselcost">
-                      💻 My code
-                    </a>
-                  </h2>
-                  <h2 className={styles.subtitle}>
-                    <a
-                      target="_blank"
-                      href="https://elrascacielosdeshinjuku.substack.com"
-                    >
-                      🪶 My articles
-                    </a>
-                  </h2>
-                </div>
+                <span className={styles.subtitle}>
+                  <a
+                    target="_blank"
+                    href="https://elrascacielosdeshinjuku.substack.com"
+                  >
+                    🪶 My articles
+                  </a>
+                </span>
               </div>
             </div>
-          </div>
-          <div className={styles.sectionContainer}>
-            <div className={styles.sectionTitle}>
-              <h2>Projects</h2>
+          </Card>
+          <Card title={"Projects"}>
+            <div className={styles.projects}>
+              {projects.map((project) => (
+                <Project
+                  onClick={() => {
+                    document.body.style.overflow = "hidden";
+                    setProject(project.id);
+                  }}
+                  project={project}
+                  key={project.title}
+                ></Project>
+              ))}
             </div>
-            <div className={`${styles.section} ${styles["projects-section"]}`}>
-              <div className={styles.projects}>
-                {projects.map((project) => (
-                  <Project
-                    project={project}
-                    dark={darkTheme}
-                    key={project.title}
-                  ></Project>
-                ))}
-              </div>
-            </div>
-          </div>
+          </Card>
         </div>
       </main>
     </>
