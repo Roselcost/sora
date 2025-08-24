@@ -57,10 +57,9 @@
 
 .project {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
   gap: 40px;
+  max-height: 70dvh;
+  overflow: auto;
 }
 
 @media (max-width: 1300px) {
@@ -69,12 +68,22 @@
   }
 }
 
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-evenly;
+}
+
 .left {
   padding: 20px;
   border-radius: 8px;
   background-color: var(--bg-color);
   border: 1px solid var(--border-color-2);
   transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .right {
@@ -103,7 +112,7 @@
 
 .buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 8px;
   width: 100%;
 }

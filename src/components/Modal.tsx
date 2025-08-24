@@ -51,21 +51,18 @@ export default function Modal(props: {
         </div>
         <Card title={props.project.title}>
           <div className={styles.project}>
-            <div className={styles.left}>
-              <Image
-                className={styles.image}
-                src={"/sora/" + props.project.image}
-                alt="Project image"
-                width={500}
-                height={0}
-                priority
-              />
-            </div>
-            <div className={styles.right}>
-              <div className={styles.description}>
-                {props.project.description.split("\n").map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+            <div className={styles['left-container']}>
+              <div className={styles.left}>
+                <Image
+                  className={styles.image}
+                  src={"/sora/" + props.project.image}
+                  alt="Project image"
+                  width={500}
+                  height={0}
+                  priority
+                />
+              </div>
+              <div className={styles.left}>
                 <div className={styles.techs}>
                   {props.project.techs.map((tech: string) => {
                     return (
@@ -91,35 +88,42 @@ export default function Modal(props: {
                     );
                   })}
                 </div>
-              </div>
-              <div className={styles.buttons}>
-                <Button
-                  type="normal"
-                  onClick={() => {
-                    window.open(props.project.gitHub);
-                  }}
-                >
-                  <Image
-                    style={{
-                      transition: "0.5s ease",
-                      filter: props.dark ? "invert(1)" : "invert(0)",
+                <div className={styles.buttons}>
+                  <Button
+                    type="normal"
+                    onClick={() => {
+                      window.open(props.project.gitHub);
                     }}
-                    alt="Github"
-                    width={20}
-                    height={20}
-                    src="/sora/GitHub.svg"
-                    priority
-                  />
-                  GitHub repo
-                </Button>
-                <Button
-                  type="normal"
-                  onClick={() => {
-                    window.open(props.project.url);
-                  }}
-                >
-                  🚀 Try it!
-                </Button>
+                  >
+                    <Image
+                      style={{
+                        transition: "0.5s ease",
+                        filter: props.dark ? "invert(1)" : "invert(0)",
+                      }}
+                      alt="Github"
+                      width={20}
+                      height={20}
+                      src="/sora/GitHub.svg"
+                      priority
+                    />
+                    GitHub repo
+                  </Button>
+                  <Button
+                    type="normal"
+                    onClick={() => {
+                      window.open(props.project.url);
+                    }}
+                  >
+                    🚀 Try it!
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.description}>
+                {props.project.description.split("\n").map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
             </div>
           </div>
