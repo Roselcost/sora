@@ -57,7 +57,7 @@
 
 .project {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   max-height: 70dvh;
   overflow: auto;
 }
@@ -71,7 +71,7 @@
 .left-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   justify-content: space-evenly;
 }
 
@@ -93,6 +93,7 @@
   align-items: flex-start;
   align-items: center;
   max-width: 500px;
+  max-height: 500px;
   gap: 8px;
 }
 
@@ -108,6 +109,13 @@
   flex-direction: column;
   gap: 12px;
   transition: 0.5s ease;
+  overflow: auto;
+}
+
+@media (max-width: 1300px) {
+  .description {
+    overflow: unset;
+  }
 }
 
 .buttons {
